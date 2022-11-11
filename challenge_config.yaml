@@ -1,8 +1,7 @@
 # If you are not sure what all these fields mean, please refer our documentation here:
 # https://evalai.readthedocs.io/en/latest/configuration.html
 title: Ariel University Contest 2022
-short_description: The 2022 challenge for cyber threat detection course students. 
-This challenge will provide API traffic dataset for threat analysis
+short_description: The 2022 challenge for cyber threat detection course students. This challenge will provide API traffic dataset for threat analysis
 description: templates/description.html
 evaluation_details: templates/evaluation_details.html
 terms_and_conditions: templates/terms_and_conditions.html
@@ -14,7 +13,7 @@ remote_evaluation: False
 is_docker_based: False
 start_date: 2019-01-01 00:00:00
 end_date: 2099-05-31 23:59:59
-published: TrueFalseField
+published: False
 
 leaderboard:
   - id: 1
