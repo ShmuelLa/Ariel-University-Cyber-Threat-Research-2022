@@ -42,7 +42,7 @@ challenge_phases:
     is_submission_public: False
     start_date: 2019-02-19 00:00:00
     end_date: 2099-04-25 23:59:59
-    test_annotation_file: annotations/result_dataset1_test.txt
+    test_annotation_file: annotations/detection_annotations_val_mta.txt
     codename: det_val_mta
     max_submissions_per_day: 301
     max_submissions_per_month: 1000
@@ -60,7 +60,7 @@ challenge_phases:
     is_submission_public: True
     start_date: 2019-03-01 00:00:00
     end_date: 2099-05-24 23:59:59
-    test_annotation_file: annotations/result_dataset1_test.txt
+    test_annotation_file: annotations/detection_annotations_test_mta.txt
     codename: det_test_mta
     max_submissions_per_day: 12
     max_submissions_per_month: 24
@@ -78,7 +78,7 @@ challenge_phases:
     is_submission_public: False
     start_date: 2019-03-01 00:00:00
     end_date: 2099-05-24 23:59:59
-    test_annotation_file: annotations/result_dataset1_test.txt
+    test_annotation_file: annotations/class_annotations_val_mta.txt
     codename: class_val_mta
     max_submissions_per_day: 300
     max_submissions_per_month: 1000
@@ -96,7 +96,7 @@ challenge_phases:
     is_submission_public: True
     start_date: 2019-03-01 00:00:00
     end_date: 2099-05-24 23:59:59
-    test_annotation_file: annotations/result_dataset1_test.txt
+    test_annotation_file: annotations/class_annotations_test_mta.txt
     codename: class_test_mta
     max_submissions_per_day: 12
     max_submissions_per_month: 24
@@ -114,7 +114,7 @@ challenge_phases:
     is_submission_public: False
     start_date: 2019-02-19 00:00:00
     end_date: 2099-04-25 23:59:59
-    test_annotation_file: annotations/result_dataset1_test.txt
+    test_annotation_file: annotations/detection_annotations_val_ustc.txt
     codename: det_val_ustc
     max_submissions_per_day: 300
     max_submissions_per_month: 1000
@@ -132,7 +132,7 @@ challenge_phases:
     is_submission_public: True
     start_date: 2019-03-01 00:00:00
     end_date: 2099-05-24 23:59:59
-    test_annotation_file: annotations/result_dataset1_test.txt
+    test_annotation_file: annotations/detection_annotations_test_ustc.txt
     codename: det_test_ustc
     max_submissions_per_day: 12
     max_submissions_per_month: 12
@@ -150,7 +150,7 @@ challenge_phases:
     is_submission_public: False
     start_date: 2019-03-01 00:00:00
     end_date: 2099-05-24 23:59:59
-    test_annotation_file: annotations/result_dataset1_test.txt
+    test_annotation_file: annotations/class_annotations_val_ustc.txt
     codename: class_val_ustc
     max_submissions_per_day: 300
     max_submissions_per_month: 1000
@@ -168,7 +168,7 @@ challenge_phases:
     is_submission_public: True
     start_date: 2019-03-01 00:00:00
     end_date: 2099-05-24 23:59:59
-    test_annotation_file: annotations/result_dataset1_test.txt
+    test_annotation_file: annotations/class_annotations_test_ustc.txt
     codename: class_test_ustc
     max_submissions_per_day: 12
     max_submissions_per_month: 12
