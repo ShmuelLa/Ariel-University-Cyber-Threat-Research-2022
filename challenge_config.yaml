@@ -1,18 +1,18 @@
 # If you are not sure what all these fields mean, please refer our documentation here:
 # https://evalai.readthedocs.io/en/latest/configuration.html
-title: Ariel University Cisco Competition 2022
-short_description: The 2022 Cisco competition for cyber threat detection course students. This challenge will provide API traffic dataset for threat analysis
+title: Malware Detection and Classification Challenge
+short_description: Detect and classifiy network sessions as malware and to their respective family.
 description: templates/description.html
 evaluation_details: templates/evaluation_details.html
 terms_and_conditions: templates/terms_and_conditions.html
-image: images/logo/challenge_logo.jpg
+image: malware_logo.jpg
 submission_guidelines: templates/submission_guidelines.html
-leaderboard_description: Here you see your and other competitors scores, try to best them all.
+leaderboard_description: In the leaderboard you can see only yours and others best scores for each phase of the challenge, please note that "Validation Phase" is for your own playing field with the website to try and upload your results and be familar with the submission process.
 evaluation_script: evaluation_script.zip
 remote_evaluation: False
 is_docker_based: False
-start_date: 2022-11-30 00:00:00
-end_date: 2023-01-30 23:59:59
+start_date: 2021-11-01 00:00:00
+end_date: 2099-05-31 23:59:59
 published: True
 
 leaderboard:

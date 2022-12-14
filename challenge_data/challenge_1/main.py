@@ -2,8 +2,9 @@ import random
 
 
 def evaluate(test_annotation_file, user_submission_file, phase_codename, **kwargs):
-    print("Starting Evaluation.....")
+    print("Starting Evaluation..... (Challenge 1)")
     print("Submission related metadata:")
+    print('in file: Challenge_1.main.py')
     """
     Evaluates the submission for a particular challenge phase adn returns score
     Arguments:
