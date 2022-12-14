@@ -49,7 +49,7 @@ challenge_phases:
     max_submissions: 1000
     default_submission_meta_attributes:
     submission_meta_attributes:
-    is_restricted_to_select_one_submission: True
+    is_restricted_to_select_one_submission: False
     is_partial_submission_evaluation_enabled: False
     allowed_submission_file_types: ".txt"
   - id: 2
