@@ -9,8 +9,8 @@ image: images/logo/challenge_logo.jpg
 submission_guidelines: templates/submission_guidelines.html
 leaderboard_description: Here you see your and other competitors scores, try to best them all.
 evaluation_script: evaluation_script.zip
-remote_evaluation: False
-is_docker_based: False
+remote_evaluation: True
+is_docker_based: True
 start_date: 2022-11-30 00:00:00
 end_date: 2023-01-30 23:59:59
 published: True
@@ -21,16 +21,6 @@ leaderboard:
       {
         "labels": ["Accuracy", "Precision", "Recall", "F1"],
         "default_order_by": "F1",
-        "metadata": {
-          "Accuracy": {
-            "sort_ascending": True,
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          },
-          "Precision": {
-            "sort_ascending": True,
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-          }
-        }
       }
 
 challenge_phases:
