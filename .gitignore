@@ -7,10 +7,7 @@ venv/
 
 # text-editor related files
 .vscode/
-*.ipynb
 
 # cache
 __pycache__
 *.pyc
-
-
