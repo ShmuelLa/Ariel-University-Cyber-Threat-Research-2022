@@ -9,7 +9,7 @@ image: images/logo/challenge_logo.jpg
 submission_guidelines: templates/submission_guidelines.html
 leaderboard_description: Here you see your and other competitors scores, try to best them all.
 evaluation_script: evaluation_script.zip
-remote_evaluation: True
+remote_evaluation: False
 is_docker_based: False
 start_date: 2022-11-30 00:00:00
 end_date: 2023-01-30 23:59:59
@@ -21,20 +21,66 @@ leaderboard:
       {
         "labels": ["Accuracy", "Precision", "Recall", "F1"],
         "default_order_by": "F1",
+        "metadata": {
+          "Accuracy": {
+            "sort_ascending": True,
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          },
+          "Precision": {
+            "sort_ascending": True,
+            "description": "2Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+          }
+        }
       }
 
 challenge_phases:
   - id: 1
-    name: Detection Validation Phase (Dataset 1)
+    name: Detection Validation Phase (MTA)
+    description: templates/challenge_phase_1_description.html
+    leaderboard_public: False
+    is_public: True
+    is_submission_public: False
+    start_date: 2019-02-19 00:00:00
+    end_date: 2099-04-25 23:59:59
+    test_annotation_file: annotations/result_dataset1_test.txt
+    codename: det_val_mta
+    max_submissions_per_day: 301
+    max_submissions_per_month: 1000
+    max_submissions: 1000
+    default_submission_meta_attributes:
+    submission_meta_attributes:
+    is_restricted_to_select_one_submission: True
+    is_partial_submission_evaluation_enabled: False
+    allowed_submission_file_types: ".txt"
+  - id: 2
+    name: Detection Test Phase (MTA)
     description: templates/challenge_phase_1_description.html
     leaderboard_public: True
     is_public: True
     is_submission_public: True
-    start_date: 2022-12-11 00:00:00
-    end_date: 2099-04-25 23:59:59
+    start_date: 2019-03-01 00:00:00
+    end_date: 2099-05-24 23:59:59
     test_annotation_file: annotations/result_dataset1_test.txt
-    codename: train_split_ttt
-    max_submissions_per_day: 10
+    codename: det_test_mta
+    max_submissions_per_day: 12
+    max_submissions_per_month: 24
+    max_submissions: 24
+    default_submission_meta_attributes:
+    submission_meta_attributes:
+    is_restricted_to_select_one_submission: False
+    is_partial_submission_evaluation_enabled: False
+    allowed_submission_file_types: ".txt"
+  - id: 3
+    name: Family Classification Validation Phase (MTA)
+    description: templates/challenge_phase_2_description.html
+    leaderboard_public: False
+    is_public: True
+    is_submission_public: False
+    start_date: 2019-03-01 00:00:00
+    end_date: 2099-05-24 23:59:59
+    test_annotation_file: annotations/result_dataset1_test.txt
+    codename: class_val_mta
+    max_submissions_per_day: 300
     max_submissions_per_month: 1000
     max_submissions: 1000
     default_submission_meta_attributes:
@@ -42,64 +88,170 @@ challenge_phases:
     is_restricted_to_select_one_submission: False
     is_partial_submission_evaluation_enabled: False
     allowed_submission_file_types: ".txt"
-  - id: 2
-    name: Test Phase
+  - id: 4
+    name: Family Classification Test Phase (MTA)
     description: templates/challenge_phase_2_description.html
     leaderboard_public: True
     is_public: True
     is_submission_public: True
-    start_date: 2019-01-01 00:00:00
+    start_date: 2019-03-01 00:00:00
     end_date: 2099-05-24 23:59:59
-    test_annotation_file: annotations/test_annotations_testsplit.json
-    codename: test
-    max_submissions_per_day: 5
-    max_submissions_per_month: 50
-    max_submissions: 50
+    test_annotation_file: annotations/result_dataset1_test.txt
+    codename: class_test_mta
+    max_submissions_per_day: 12
+    max_submissions_per_month: 24
+    max_submissions: 24
     default_submission_meta_attributes:
-      - name: method_name
-        is_visible: True
-      - name: method_description
-        is_visible: True
-      - name: project_url
-        is_visible: True
-      - name: publication_url
-        is_visible: True
     submission_meta_attributes:
-      - name: TextAttribute
-        description: Sample
-        type: text
-      - name: SingleOptionAttribute
-        description: Sample
-        type: radio
-        options: ["A", "B", "C"]
-      - name: MultipleChoiceAttribute
-        description: Sample
-        type: checkbox
-        options: ["alpha", "beta", "gamma"]
-      - name: TrueFalseField
-        description: Sample
-        type: boolean
     is_restricted_to_select_one_submission: False
     is_partial_submission_evaluation_enabled: False
+    allowed_submission_file_types: ".txt"
+  - id: 5
+    name: Detection Validation Phase (USTC)
+    description: templates/challenge_phase_1_description.html
+    leaderboard_public: False
+    is_public: True
+    is_submission_public: False
+    start_date: 2019-02-19 00:00:00
+    end_date: 2099-04-25 23:59:59
+    test_annotation_file: annotations/result_dataset1_test.txt
+    codename: det_val_ustc
+    max_submissions_per_day: 300
+    max_submissions_per_month: 1000
+    max_submissions: 1000
+    default_submission_meta_attributes:
+    submission_meta_attributes:
+    is_restricted_to_select_one_submission: True
+    is_partial_submission_evaluation_enabled: False
+    allowed_submission_file_types: ".txt"
+  - id: 6
+    name: Detection Test Phase (USTC)
+    description: templates/challenge_phase_1_description.html
+    leaderboard_public: True
+    is_public: True
+    is_submission_public: True
+    start_date: 2019-03-01 00:00:00
+    end_date: 2099-05-24 23:59:59
+    test_annotation_file: annotations/result_dataset1_test.txt
+    codename: det_test_ustc
+    max_submissions_per_day: 12
+    max_submissions_per_month: 12
+    max_submissions: 12
+    default_submission_meta_attributes:
+    submission_meta_attributes:
+    is_restricted_to_select_one_submission: False
+    is_partial_submission_evaluation_enabled: False
+    allowed_submission_file_types: ".txt"
+  - id: 7
+    name: Family Classification Validation Phase (USTC)
+    description: templates/challenge_phase_2_description.html
+    leaderboard_public: False
+    is_public: True
+    is_submission_public: False
+    start_date: 2019-03-01 00:00:00
+    end_date: 2099-05-24 23:59:59
+    test_annotation_file: annotations/result_dataset1_test.txt
+    codename: class_val_ustc
+    max_submissions_per_day: 300
+    max_submissions_per_month: 1000
+    max_submissions: 1000
+    default_submission_meta_attributes:
+    submission_meta_attributes:
+    is_restricted_to_select_one_submission: False
+    is_partial_submission_evaluation_enabled: False
+    allowed_submission_file_types: ".txt"
+  - id: 8
+    name: Family Classification Test Phase (USTC)
+    description: templates/challenge_phase_2_description.html
+    leaderboard_public: True
+    is_public: True
+    is_submission_public: True
+    start_date: 2019-03-01 00:00:00
+    end_date: 2099-05-24 23:59:59
+    test_annotation_file: annotations/result_dataset1_test.txt
+    codename: class_test_ustc
+    max_submissions_per_day: 12
+    max_submissions_per_month: 12
+    max_submissions: 12
+    default_submission_meta_attributes:
+    submission_meta_attributes:
+    is_restricted_to_select_one_submission: False
+    is_partial_submission_evaluation_enabled: False
+    allowed_submission_file_types: ".txt"
 
 dataset_splits:
   - id: 1
-    name: Train Split
-    codename: train_split
+    name: Detection Validation Split (MTA)
+    codename: det_val_split_mta
   - id: 2
-    name: Test Split
-    codename: test_split
+    name: Detection Test Split (MTA)
+    codename: det_test_split_mta
+  - id: 3
+    name: Family Classification Validation Split (MTA)
+    codename: class_val_split_mta
+  - id: 4
+    name: Family Classification Test Split (MTA)
+    codename: class_test_split_mta
+  - id: 5
+    name: Detection Validation Split (USTC)
+    codename: det_val_split_ustc
+  - id: 6
+    name: Detection Test Split (USTC)
+    codename: det_test_split_ustc
+  - id: 7
+    name: Family Classification Validation Split (USTC)
+    codename: class_val_split_ustc
+  - id: 8
+    name: Family Classification Test Split (USTC)
+    codename: class_test_split_ustc
+
 
 challenge_phase_splits:
   - challenge_phase_id: 1
     leaderboard_id: 1
     dataset_split_id: 1
     visibility: 2
-    leaderboard_decimal_precision: 5
+    leaderboard_decimal_precision: 4
     is_leaderboard_order_descending: True
   - challenge_phase_id: 2
     leaderboard_id: 1
-    dataset_split_id: 1
+    dataset_split_id: 2
     visibility: 3
-    leaderboard_decimal_precision: 2
+    leaderboard_decimal_precision: 4
+    is_leaderboard_order_descending: True
+  - challenge_phase_id: 3
+    leaderboard_id: 1
+    dataset_split_id: 3
+    visibility: 2
+    leaderboard_decimal_precision: 4
+    is_leaderboard_order_descending: True
+  - challenge_phase_id: 4
+    leaderboard_id: 1
+    dataset_split_id: 4
+    visibility: 3
+    leaderboard_decimal_precision: 4
+    is_leaderboard_order_descending: True
+  - challenge_phase_id: 5
+    leaderboard_id: 1
+    dataset_split_id: 5
+    visibility: 2
+    leaderboard_decimal_precision: 4
+    is_leaderboard_order_descending: True
+  - challenge_phase_id: 6
+    leaderboard_id: 1
+    dataset_split_id: 6
+    visibility: 3
+    leaderboard_decimal_precision: 4
+    is_leaderboard_order_descending: True
+  - challenge_phase_id: 7
+    leaderboard_id: 1
+    dataset_split_id: 7
+    visibility: 2
+    leaderboard_decimal_precision: 4
+    is_leaderboard_order_descending: True
+  - challenge_phase_id: 8
+    leaderboard_id: 1
+    dataset_split_id: 8
+    visibility: 3
+    leaderboard_decimal_precision: 4
     is_leaderboard_order_descending: True
