@@ -37,7 +37,7 @@ challenge_phases:
   - id: 1
     name: Detection Validation Phase (Dataset 1)
     description: templates/challenge_phase_1_description.html
-    leaderboard_public: False
+    leaderboard_public: True
     is_public: True
     is_submission_public: True
     start_date: 2022-12-11 00:00:00
@@ -104,18 +104,12 @@ challenge_phase_splits:
   - challenge_phase_id: 1
     leaderboard_id: 1
     dataset_split_id: 1
-    visibility: 1
-    leaderboard_decimal_precision: 2
+    visibility: 2
+    leaderboard_decimal_precision: 5
     is_leaderboard_order_descending: True
   - challenge_phase_id: 2
     leaderboard_id: 1
     dataset_split_id: 1
     visibility: 3
-    leaderboard_decimal_precision: 2
-    is_leaderboard_order_descending: True
-  - challenge_phase_id: 2
-    leaderboard_id: 1
-    dataset_split_id: 2
-    visibility: 1
     leaderboard_decimal_precision: 2
     is_leaderboard_order_descending: True
